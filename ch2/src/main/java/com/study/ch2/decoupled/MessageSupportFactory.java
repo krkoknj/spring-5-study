@@ -3,7 +3,6 @@ package com.study.ch2.decoupled;
 import java.util.Properties;
 
 public class MessageSupportFactory {
-
     private static MessageSupportFactory instance;
     private Properties props;
     private MessageRenderer renderer;

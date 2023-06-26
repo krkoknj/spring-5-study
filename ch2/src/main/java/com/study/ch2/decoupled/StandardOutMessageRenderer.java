@@ -2,6 +2,7 @@ package com.study.ch2.decoupled;
 
 public class StandardOutMessageRenderer implements MessageRenderer {
 
+    // xml 설정 파일을 읽어서 스프링이 자동으로 의존성 주입.
     private MessageProvider messageProvider;
 
     public StandardOutMessageRenderer(){
@@ -12,8 +13,8 @@ public class StandardOutMessageRenderer implements MessageRenderer {
     public void render() {
         if (messageProvider == null) {
             throw new RuntimeException(
-                    StandardOutMessageRenderer.class.getName() 
-                    + " 클래스의 messageProvider 프로퍼티를 설정해야 합니다.");
+                    StandardOutMessageRenderer.class.getName()
+                            + " 클래스의 messageProvider 프로퍼티를 설정해야 합니다.");
         }
         System.out.println(messageProvider.getMessage());
     }

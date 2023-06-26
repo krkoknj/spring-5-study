@@ -7,6 +7,8 @@
 
     <bean id="provider" class="com.study.ch2.decoupled.HelloWorldMessageProvider"/>
 
+    <!-- p 네임스페이스 속성으로 의존관계를 알려준다 (MessageRenderer
+        객체는 MessageProvider 객채에 의존관계에 있다.)-->
     <bean id="renderer" class="com.study.ch2.decoupled.StandardOutMessageRenderer"
         p:messageProvider-ref="provider"/>
 </beans>
